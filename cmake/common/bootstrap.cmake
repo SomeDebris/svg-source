@@ -27,12 +27,12 @@ if(POLICY CMP0090)
   cmake_policy(SET CMP0090 NEW)
 endif()
 
-# Prohibit in-source builds
-if("${CMAKE_CURRENT_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_SOURCE_DIR}")
-  message(FATAL_ERROR "In-source builds are not supported. "
-                      "Specify a build directory via 'cmake -S <SOURCE DIRECTORY> -B <BUILD_DIRECTORY>' instead.")
-  file(REMOVE_RECURSE "${CMAKE_CURRENT_SOURCE_DIR}/CMakeCache.txt" "${CMAKE_CURRENT_SOURCE_DIR}/CMakeFiles")
-endif()
+# # Prohibit in-source builds
+# if("${CMAKE_CURRENT_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_SOURCE_DIR}")
+#   message(FATAL_ERROR "In-source builds are not supported. "
+#                       "Specify a build directory via 'cmake -S <SOURCE DIRECTORY> -B <BUILD_DIRECTORY>' instead.")
+#   file(REMOVE_RECURSE "${CMAKE_CURRENT_SOURCE_DIR}/CMakeCache.txt" "${CMAKE_CURRENT_SOURCE_DIR}/CMakeFiles")
+# endif()
 
 # Use folders for source file organization with IDE generators (Visual Studio/Xcode)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
